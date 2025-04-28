@@ -1,9 +1,11 @@
 import React from 'react';
+import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { section } from 'framer-motion/client';
 
 const HomeComponents = () => {
   return (
@@ -70,18 +72,39 @@ const HomeComponents = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-      </nav>
-      <section>
-        <>
-        <div className="container">
-        <div>
-        <h3> hello world </h3>
+      </nav>  
+   <section className="py-10 bg-gray-100">
+   <div className="container mx-auto px-4">
+        <div className="flex justify-center items-center mb-8">
+          <h3 className="bg-amber-600 hover:bg-pink-600 text-white px-6 py-3 rounded-3xl text-xl">
+          Parallax Animation Effects
+          </h3>
         </div>
-
-        </div>
-        </>
-      </section>
+       <marquee>
+       <div className="flex flex-wrap justify-center gap-6">
+          {/* Each image with animation */}
+          {["layer1", "layer2", "layer4", "layer5", "layer6"].map((layer, index) => (
+            <motion.img
+              key={index}
+              className="w-[150px] md:w-[200px] h-[200px] md:h-[250px] object-cover rounded-2xl shadow-lg"
+              src={`/images/${layer}.png`}
+              alt="Layer"
+              initial={{ opacity: 0, scale: 0.8, rotateY: 90 }}
+              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}/>
+          ))}
+      </div>
+      </marquee>
+      </div>
+    </section>
+    <section2>
+      <div>
+        
+      </div>
+    </section2>
     </>
+  
   );
  };
 
