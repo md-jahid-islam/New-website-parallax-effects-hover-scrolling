@@ -1,0 +1,184 @@
+ .footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+    
+  }
+  
+  .footer-section {
+    flex: 1 1 200px;
+    min-width: 200px;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fbbf24;
+  }
+  
+  .footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f472b6;
+    margin-bottom: 10px;
+  }
+  
+  .footer-description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #f472b6;
+  }
+  
+  .footer-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-section input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .footer-section button {
+    padding: 10px;
+    background-color: #f472b6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer-section button:hover {
+    background-color: #ec4899;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 14px;
+    color: #aaa;
+  }
+  /*responsive design */
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-section {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  
+  .banner-swiper {
+    width: 100%;
+    height: auto; 
+  }
+  
+  .banner-slide {
+    position: relative; 
+  }
+  
+  .banner-slide img {
+    display: block;
+    width: 100%;
+    height: auto; 
+    object-fit: cover; 
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .banner-slide:hover .overlay {
+    opacity: 1; 
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 20px; 
+  }
+  
+  .button-3d {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .button-3d:hover {
+    transform: translate(-2px, -2px); 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4); 
+  }
+  
+  .button-3d:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Responsive Design Example */
+  @media (max-width: 768px) {
+    .button-container {
+      flex-direction: column; 
+      gap: 10px;
+    }
+  
+    .button-3d {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+   
+  }
